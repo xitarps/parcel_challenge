@@ -54,6 +54,8 @@ group :test do
   gem 'webdrivers'
   # SimpleCov - https://github.com/simplecov-ruby/simplecov
   gem 'simplecov'
+  # Rubocop - https://github.com/rubocop-hq/rubocop-rails
+  gem 'rubocop-rails', require: false
 end
 
 group :production do
