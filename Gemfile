@@ -33,6 +33,8 @@ group :development, :test do
   gem 'sqlite3', '~> 1.4'
   # Rspec - tests - https://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 4.0.1'
+  # Factory Bot - https://github.com/thoughtbot/factory_bot_rails
+  gem 'factory_bot_rails'
 end
 
 group :development do
