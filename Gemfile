@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Hirb - https://github.com/cldwalker/hirb
 gem 'hirb'
 
+# ValidatesCpfCnpj - https://github.com/rfs/validates_cpf_cnpj
+gem 'validates_cpf_cnpj'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

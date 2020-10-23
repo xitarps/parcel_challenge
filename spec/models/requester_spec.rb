@@ -32,5 +32,23 @@ RSpec.describe Requester, type: :model do
       expect(@requester.cnpj).not_to eq('06510631000137')
       expect(@requester.valid?).to eq(false)
     end
+
+    it 'not valid when cnpj is blank' do
+      @requester = FactoryBot.build(:requester, cnpj: '')
+
+      expect(@requester.valid?).to eq(false)
+    end
+
+    it 'valid when cnpj is right' do
+      @requester = FactoryBot.build(:requester, cnpj: '06510631000137')
+
+      expect(@requester.valid?).to eq(true)
+    end
+
+    it 'not valid when cnpj is wrong' do
+      @requester = FactoryBot.build(:requester, cnpj: '06510631000135')
+
+      expect(@requester.valid?).to eq(false)
+    end
   end
 end

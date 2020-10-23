@@ -8,6 +8,6 @@ class Requester < ApplicationRecord
   has_many :phones, dependent: :nullify
   has_many :credits, dependent: :nullify
 
-  validates :cnpj, presence: true
+  validates :cnpj, presence: true, cnpj: true
   validates :company_name, presence: true
 end
