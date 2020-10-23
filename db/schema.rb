@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_10_23_163836) do
   end
 
   create_table "credits", force: :cascade do |t|
-    t.decimal "parcel", precision: 10, scale: 12, null: false
+    t.decimal "parcel", precision: 10, scale: 12, default: "0.0", null: false
     t.decimal "tax", precision: 10, scale: 12, null: false
     t.integer "periods", null: false
     t.boolean "already_accepted", default: false, null: false

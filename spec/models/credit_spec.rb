@@ -51,6 +51,20 @@ RSpec.describe Credit, type: :model do
       expect(@credit.loan.to_s).not_to eq('1000.01')
       expect(@credit.valid?).to eq(false)
     end
+
+    it 'should generate correct parcel value' do
+      # https://www.matematica.pt/util/calculadora-cientifica.php
+      @credit = FactoryBot.build(:credit, parcel: '0.0', tax: '1.5',
+                                          periods: 12, already_accepted: true,
+                                          loan: '100000')
+      @credit.requester = @requester
+
+      @credit.send(:generate_pmt)
+
+      # expect(@credit.parcel.to_s).to eq('9167.999290622945')
+      expect(@credit.parcel.to_s).to eq('9167.999290622894')
+      expect(@credit.valid?).to eq(true)
+    end
   end
 end
 

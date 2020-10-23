@@ -22,4 +22,14 @@ class Credit < ApplicationRecord
                                     end) if already_accepted
     end
   end
+
+  def generate_pmt
+    tax_percent = (tax / 100)
+    divident = ((1 + tax_percent)**12) * tax_percent
+    diviser = ((1 + tax_percent)**12) - 1
+
+    pmt = loan * (divident / diviser)
+
+    self.parcel = pmt
+  end
 end
