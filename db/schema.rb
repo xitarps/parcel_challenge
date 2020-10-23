@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_23_005334) do
+ActiveRecord::Schema.define(version: 2020_10_23_150620) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "requester_zip_code"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 2020_10_23_005334) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["requester_id"], name: "index_addresses_on_requester_id"
+  end
+
+  create_table "credits", force: :cascade do |t|
+    t.decimal "parcel", precision: 10, scale: 12, null: false
+    t.decimal "tax", precision: 10, scale: 12, null: false
+    t.integer "periods", null: false
+    t.boolean "already_accepted", default: false, null: false
+    t.decimal "loan", precision: 10, scale: 12, null: false
+    t.integer "requester_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["requester_id"], name: "index_credits_on_requester_id"
   end
 
   create_table "phones", force: :cascade do |t|
@@ -47,5 +59,6 @@ ActiveRecord::Schema.define(version: 2020_10_23_005334) do
   end
 
   add_foreign_key "addresses", "requesters"
+  add_foreign_key "credits", "requesters"
   add_foreign_key "phones", "requesters"
 end
