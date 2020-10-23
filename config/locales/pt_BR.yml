@@ -46,7 +46,7 @@ pt-BR:
   back: 'anterior'
   unhappy: 'descontente'
   edit: 'editar'
-  username: 'nome'
+  requestername: 'nome'
   show: 'detalhes'
   currently_waiting_confirmation_for: 'atualmente aguardando confirmação'
   resend_unlock_instructions: 'enviar novamente instruções de desbloqueio'
@@ -78,8 +78,8 @@ pt-BR:
   result: 'resultado'
   send: 'enviar'
   unknow: 'desconhecido'
-  user_zip_code: 'cep'
-  user: 'usuário'
+  requester_zip_code: 'cep'
+  requester: 'usuário'
   terms: termos
   art: 'art'
   app_title: 'parcel challenge'
@@ -87,24 +87,27 @@ pt-BR:
   messages: 'mensagens'
   account: 'Conta'
   or: 'ou'
-  how_call_user: 'nome ou email'
+  how_call_requester: 'nome ou email'
   sorry_error: 'algo não está certo...'
   notification: 'notificação'
   welcome_message: 'bem vindo ao sistema.'
+  company name: 'razão social'
+  address: 'endereço'
+  phone: 'telefone'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
   activerecord:
     models:
-      user: 'usuário'
+      requester: 'usuário'
     attributes:
-      user:
+      requester:
         name: 'nome'
         password: 'senha'
         current_password: 'senha atual'
         password_confirmation: 'confirmação de senha'
         email: 'email'
-        user_zip_code: 'cep'
+        requester_zip_code: 'cep'
         country: 'nacionalidade'
         inclusion: 'inclusao'
     errors:
