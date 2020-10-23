@@ -82,14 +82,15 @@ pt-BR:
   user: 'usuário'
   terms: termos
   art: 'art'
-  app_title: 'chatroom'
+  app_title: 'parcel challenge'
   message: 'mensagem'
   messages: 'mensagens'
   account: 'Conta'
   or: 'ou'
   how_call_user: 'nome ou email'
-  sorry_error: 'Algo não está certo...'
+  sorry_error: 'algo não está certo...'
   notification: 'notificação'
+  welcome_message: 'bem vindo ao sistema.'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'

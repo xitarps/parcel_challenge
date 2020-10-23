@@ -39,6 +39,7 @@ AllCops:
     - 'spec/spec_helper.rb'
     - 'spec/rails_helper.rb'
     - 'spec/factories/self_tests.rb'
+    - 'spec/factories/*'
 
 
 Style/ClassAndModuleChildren:
