@@ -4,9 +4,27 @@
 <p>Tax: <%= @credit.tax.to_s %>%</p>
 <p>Months: <%= @credit.periods %></p>
 <p>Parcel: R$ <%= @credit.parcel %></p>
+<p>Status: <%= @credit.already_accepted ? t(:accepted) : t(:pending) %></p>
+<p><%= @credit.already_accepted ? t(:error_accepted) : t(:notice_accepted) %></p>
 
 <p>
   <%= link_to t(:dashboard).capitalize, requester_dashboard_path%> | 
   <%= link_to t(:edit).capitalize, edit_credit_path(@credit)%> | 
   <%= link_to t(:delete).capitalize, credit_path(@credit) , method: :delete %>
+</p>
+
+<% unless @credit.parcels.empty? %>
+  <hr>
+  <h3>Parcels:</h3>
+<% end %>
+
+<p>
+  <% @credit.parcels.each do |parcel| %>
+    <p>
+      <p>Nº <%= parcel.position %></p>
+      <p>Status: <%= parcel.paid ? 'Paid' : 'Not Paid' %></p>
+      <p>Value: R$ <%= parcel.value.to_s %></p>
+      <p>Expiring Date: <%= parcel.expiring_date.strftime("%d/%m/%Y") %></p>
+    </p>
+  <% end %>
 </p>

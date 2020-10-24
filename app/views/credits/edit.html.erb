@@ -2,3 +2,7 @@
 <p>Status: <%= @credit.already_accepted ? t(:accepted) : t(:pending) %></p>
 <p><%= @credit.already_accepted ? t(:error_accepted) : t(:notice_accepted) %></p>
 <%= render 'form' %>
+
+<p>
+  <%= link_to t(:dashboard).capitalize, requester_dashboard_path%> 
+</p>

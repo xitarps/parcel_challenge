@@ -10,7 +10,9 @@ pt-BR:
         signed_in : 'Welcome'
     failure:
       requester:
-        already_authenticated: "Oops, already logged in" 
+        already_authenticated: "Oops, already logged in"
+        unauthenticated: 'Oops, maybe if logged in, no?'
+        not_found_in_database: "Oops, couldn't find you... wrong credentials?"
   date:
     formats:
       default: "%A, %d de %B de %Y, %H:%M h"
@@ -120,10 +122,10 @@ pt-BR:
   credit_saved: 'credit saved'
   credit_details: 'credit details'
   error: 'oops, something went wrong'
-  error_accepted: "Can't modify accepted credits"
+  error_accepted: "Can't modify accepted credit"
   accepted: 'accepted'
   notice_accepted: '* can only modify pending credit request'
-  cant_delete_accepted: "Can't delete accepted credits"
+  cant_delete_accepted: "Can't delete accepted credit"
   are_you_sure: "Are you sure?"
   edit: 'edit'
   delete: 'delete'

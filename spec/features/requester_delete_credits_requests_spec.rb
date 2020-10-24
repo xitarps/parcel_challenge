@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'Requester delete credit requests' do
   scenario 'successfully' do
     log_in_requester
-    generate_credits_and_parcels('100000', 12)
+    generate_credits_and_parcels(12, '100000')
     @credit.already_accepted = false
     @credit.save
     visit requester_dashboard_path
@@ -14,7 +14,9 @@ feature 'Requester delete credit requests' do
 
   scenario 'fail when accepted' do
     log_in_requester
-    generate_credits_and_parcels('100000', 12)
+    generate_credits_and_parcels(12, '100000')
+    @credit.already_accepted = true
+    @credit.save
     visit requester_dashboard_path
     click_on 'Delete'
 
@@ -35,6 +37,6 @@ def generate_credits_and_parcels(periods, loan)
   @credit.save
 
   @credit.already_accepted = true
-  
+
   @credit.send(:generate_pmt)
 end

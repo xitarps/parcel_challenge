@@ -2,6 +2,11 @@
 <h3><%= current_requester.email %></h3>
 <p><%= link_to 'New', new_credit_path%></p>
 
+<% unless current_requester.credits.empty? %>
+  <hr>
+  <h3>Credit requests:</h3>
+<% end %>
+
 <% current_requester.credits.each do |credit| %>
   <p>Credit: R$ <%= credit.loan %></p>
   <p>Parcels: <%= credit.periods %></p>
