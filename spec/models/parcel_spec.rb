@@ -13,6 +13,12 @@ RSpec.describe Parcel, type: :model do
       expect(@parcel.position).to eq(1)
       expect(@parcel.valid?).to eq(true)
     end
+    it 'valid when credit is already approved' do
+      @credit.already_accepted = true
+      @credit.send(:generate_parcels)
+
+      expect(@credit.parcels.empty?).to eq(false)
+    end
     it 'not valid when credit is not approved yet' do
       @credit.already_accepted = false
       @credit.send(:generate_parcels)

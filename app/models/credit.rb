@@ -25,8 +25,8 @@ class Credit < ApplicationRecord
 
   def generate_pmt
     tax_percent = (tax / 100)
-    divident = ((1 + tax_percent)**12) * tax_percent
-    diviser = ((1 + tax_percent)**12) - 1
+    divident = ((1 + tax_percent)**periods) * tax_percent
+    diviser = ((1 + tax_percent)**periods) - 1
 
     pmt = loan * (divident / diviser)
 

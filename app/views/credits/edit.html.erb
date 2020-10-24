@@ -1,0 +1,4 @@
+<h1><% t(:edit_credit).capitalize%></h1>
+<p>Status: <%= @credit.already_accepted ? t(:accepted) : t(:pending) %></p>
+<p><%= @credit.already_accepted ? t(:error_accepted) : t(:notice_accepted) %></p>
+<%= render 'form' %>

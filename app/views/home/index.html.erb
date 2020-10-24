@@ -1,2 +1,6 @@
 <h1><%= t(:app_title).capitalize %></h1>
 <h2><%= t(:welcome_message).capitalize %></h2>
+<%= link_to 'dashboard', requester_dashboard_path%> | 
+<%= link_to 'Log in', new_requester_session_path%> | 
+<%= link_to 'Sign up', new_requester_registration_path%> | 
+<%= link_to 'Log out', destroy_requester_session_path , method: :delete%>

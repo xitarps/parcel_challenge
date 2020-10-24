@@ -1,0 +1,12 @@
+<h1><%= t(:credit_details).capitalize%></h1>
+
+<p>Credit: R$ <%= @credit.loan.to_s %></p>
+<p>Tax: <%= @credit.tax.to_s %>%</p>
+<p>Months: <%= @credit.periods %></p>
+<p>Parcel: R$ <%= @credit.parcel %></p>
+
+<p>
+  <%= link_to t(:dashboard).capitalize, requester_dashboard_path%> | 
+  <%= link_to t(:edit).capitalize, edit_credit_path(@credit)%> | 
+  <%= link_to t(:delete).capitalize, credit_path(@credit) , method: :delete %>
+</p>

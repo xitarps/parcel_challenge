@@ -1,4 +1,16 @@
 pt-BR:
+  devise:
+    registrations:
+      requester:
+        signed_up: 'Successfully signed up'
+        signed_out: 'Successfully signed out'
+    sessions:
+      requester:
+        already_signed_out: 'Oops, already out'
+        signed_in : 'Welcome'
+    failure:
+      requester:
+        already_authenticated: "Oops, already logged in" 
   date:
     formats:
       default: "%A, %d de %B de %Y, %H:%M h"
@@ -16,6 +28,10 @@ pt-BR:
       long: "%A, %d de %B de %Y, %H:%M h"
     am: ''
     pm: ''
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Invalid record'
   home: 'início'
   hello: 'olá'
   your_email: 'seu email'
@@ -26,7 +42,7 @@ pt-BR:
   modify: 'alterar'
   enter: 'entrar'
   password: 'senha'
-  log_in: 'entrar'
+  log_in: 'log in'
   log_out: 'sair'
   sign_up: 'cadastrar'
   remember_me: 'lembrar'
@@ -91,9 +107,29 @@ pt-BR:
   sorry_error: 'algo não está certo...'
   notification: 'notificação'
   welcome_message: 'bem vindo ao sistema.'
-  company name: 'razão social'
+  company_name: 'razão social'
+  cnpj: 'cnpj'
   address: 'endereço'
   phone: 'telefone'
+  oops: 'Oops! you are not supposed be here... '
+  new_credit: 'new credit'
+  edit_credit: 'edit_credit'
+  loan: 'loan'
+  tax: 'tax'
+  periods: 'periods'
+  credit_saved: 'credit saved'
+  credit_details: 'credit details'
+  error: 'oops, something went wrong'
+  error_accepted: "Can't modify accepted credits"
+  accepted: 'accepted'
+  notice_accepted: '* can only modify pending credit request'
+  cant_delete_accepted: "Can't delete accepted credits"
+  are_you_sure: "Are you sure?"
+  edit: 'edit'
+  delete: 'delete'
+  dashboard: 'dashboard'
+  credit_destroyed: 'Successfully deleted'
+  error_on_delete: 'Error on delete'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
