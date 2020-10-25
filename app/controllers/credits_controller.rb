@@ -1,6 +1,6 @@
 class CreditsController < ApplicationController
-  before_action :authenticate_requester!
-  before_action :check_and_select_credit, only: %i[show edit update destroy]
+  before_action :check_if_requester_or_admin
+  before_action :check_and_select_credit, except: %i[new create]
   def new
     @credit = Credit.new
   end
@@ -46,6 +46,17 @@ class CreditsController < ApplicationController
     end
   end
 
+  def update_parcels
+    if pending_and_admin
+      msg = 'Parcels generated successfully'
+      redirect_to @credit, notice: msg if make_parcels
+    else
+      msg = 'Parcels generation error(probably already accepted)'
+      flash.now[:alert] = msg
+      render :show
+    end
+  end
+
   private
 
   def credit_params
@@ -63,13 +74,34 @@ class CreditsController < ApplicationController
   end
 
   def exists_and_belongs
+    admin = admin_signed_in?
     exists = Credit.exists?(params[:id])
     owner = exists && Credit.find(params[:id]).requester == current_requester
 
-    exists && owner ? true : false
+    exists && (owner || admin) ? true : false
   end
 
   def can_modify?
     !!(!@credit.already_accepted)
+  end
+
+  def check_if_requester_or_admin
+    if admin_signed_in?
+      authenticate_admin!
+    else
+      authenticate_requester!
+    end
+  end
+
+  def make_parcels
+    @credit.already_accepted = true
+    @credit.save
+    @credit.send(:generate_parcels)
+  end
+
+  def pending_and_admin
+    admin = admin_signed_in?
+    pending = !@credit.already_accepted
+    admin && pending
   end
 end

@@ -1,0 +1,11 @@
+<h1>Requesters:</h1>
+
+<p>Total Requesters: <%= @requesters.count %></p>
+<% @requesters.each do |requester| %>
+<p>
+  <p> company name: <%= requester.company_name %></p>
+  <p> email: <%= requester.email %></p>
+  <p> cnpj: <%= requester.cnpj %></p>
+  <%= link_to 'Details', requester_path(requester)%>
+</p>
+<% end %>

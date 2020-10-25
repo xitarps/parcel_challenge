@@ -3,6 +3,12 @@
 <p><%= @credit.already_accepted ? t(:error_accepted) : t(:notice_accepted) %></p>
 <%= render 'form' %>
 
+<% if requester_signed_in? %>
 <p>
-  <%= link_to t(:dashboard).capitalize, requester_dashboard_path%> 
+  <%= link_to t(:dashboard).capitalize, requester_dashboard_path%>
 </p>
+<% else %>
+<p>
+  <%= link_to t(:dashboard).capitalize, admin_dashboard_path%>
+</p>
+<% end %>

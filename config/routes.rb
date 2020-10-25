@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get 'requester_dashboard', to: 'requester_dashboard#index'
+  get 'admin_dashboard', to: 'admin_dashboard#index'
+
+  post 'accept_credit', to: 'credits#update_parcels'
 
   resources :credits, except: %i[index]
+  resources :requesters, only: %i[index show]
 end

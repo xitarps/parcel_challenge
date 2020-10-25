@@ -3,11 +3,17 @@ pt-BR:
     registrations:
       requester:
         signed_up: 'Successfully signed up'
+        signed_in: 'Successfully signed in'
+        signed_out: 'Successfully signed out'
+      admin:
+        signed_up: 'Successfully signed up (Admin)'
+        signed_in: 'Successfully signed in'
         signed_out: 'Successfully signed out'
     sessions:
       requester:
         already_signed_out: 'Oops, already out'
         signed_in : 'Welcome'
+        signed_out: 'Successfuly logged out'
     failure:
       requester:
         already_authenticated: "Oops, already logged in"
