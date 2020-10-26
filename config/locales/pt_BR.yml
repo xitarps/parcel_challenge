@@ -22,12 +22,12 @@ pt-BR:
       requester:
         already_authenticated: "Oops, already logged in"
         unauthenticated: 'Oops, maybe if logged in, no?'
-        not_found_in_database: "Oops, couldn't find you... wrong credentials?"
+        not_found_in_database: "Oops, wrong credentials?"
         invalid: 'Field invalid'
       admin:
         already_authenticated: "Oops, already logged in"
         unauthenticated: 'Oops, maybe if logged in, no?'
-        not_found_in_database: "Oops, couldn't find you... wrong credentials?"
+        not_found_in_database: "Oops, wrong credentials?"
         invalid: 'Field invalid'
   date:
     formats:
