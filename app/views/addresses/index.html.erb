@@ -1,21 +1,23 @@
-<h2>Addresses</h2>
-<% if @addresses.empty? %>
-  <p>No Address number yet...</p>
-<% end %>
+<div>
+  <h2>Addresses</h2>
+  <% if @addresses.empty? %>
+    <p>No Address number yet...</p>
+  <% end %>
 
-<%= link_to 'Add Address' , new_address_path %>
+  <%= link_to 'Add Address' , new_address_path %>
 
-<hr>
+  <hr>
 
-<% @addresses.each_with_index do |address, index| %>
-  <p>
-    <p><%= index + 1 %>º</p>
-    <p><%= address.street %></p>
-    <p>nº <%= address.number %></p>
+  <% @addresses.each_with_index do |address, index| %>
     <p>
-      <%= link_to 'Details', address_path(address) %> |
-      <%= link_to 'Edit', edit_address_path(address)%> | 
-      <%= link_to 'Delete', address_path(address), method: :delete %>
+      <p><%= index + 1 %>º</p>
+      <p><%= address.street %></p>
+      <p>nº <%= address.number %></p>
+      <p>
+        <%= link_to 'Details', address_path(address) %> |
+        <%= link_to 'Edit', edit_address_path(address)%> | 
+        <%= link_to 'Delete', address_path(address), method: :delete %>
+      </p>
     </p>
-  </p>
-<% end %>
+  <% end %>
+</div>

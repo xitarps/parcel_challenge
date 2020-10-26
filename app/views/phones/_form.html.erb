@@ -1,8 +1,12 @@
 <%= form_with model: @phone, local: true do |f| %>
 
   <p><%= t(:only_numbers) %></p>
-  <%= f.label :number, t(:number) %>
-  <%= telephone_field(:phone, :number) %>
+  <div>
+    <%= f.label :number, t(:number) %>
+  </div>
+  <div>
+    <%= telephone_field(:phone, :number, placeholder: 'ex: 11955554444') %>
+  </div>
   
-  <%= f.submit "Save" %>
+  <%= f.submit "Save", class: 'btn btn-outline-secondary' %>
 <% end %>

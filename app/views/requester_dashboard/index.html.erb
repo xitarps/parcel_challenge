@@ -1,20 +1,22 @@
-<h3><%= current_requester.email %></h3>
-<p><%= link_to 'New Credit Request', new_credit_path%></p>
+<div>
+  <h3><%= current_requester.email %></h3>
+  <p><%= link_to 'New Credit Request', new_credit_path%></p>
 
-<% unless current_requester.credits.empty? %>
-  <hr>
-  <h3>Credit requests:</h3>
-<% end %>
+  <% unless current_requester.credits.empty? %>
+    <hr>
+    <h3>Credit requests:</h3>
+  <% end %>
 
-<% current_requester.credits.each_with_index do |credit,index| %>
-  <h5>Credit request(<%= index + 1%>)</h5>
-  <p>Credit: R$ <%= credit.loan %></p>
-  <p>Parcels: <%= credit.periods %></p>
-  <p>Status: <%= credit.already_accepted ? 'Accepted' : 'Pending' %></p>
-  <p>
-    <%= link_to 'Details', credit_path(credit)%> | 
-    <%= link_to 'Edit', edit_credit_path(credit)%> | 
-    <%= link_to 'Delete', credit_path(credit) , method: :delete %>
-  </p>
-  <hr>
-<% end %>
+  <% current_requester.credits.each_with_index do |credit,index| %>
+    <h5>Credit request(<%= index + 1%>)</h5>
+    <p>Credit: R$ <%= credit.loan %></p>
+    <p>Parcels: <%= credit.periods %></p>
+    <p>Status: <%= credit.already_accepted ? 'Accepted' : 'Pending' %></p>
+    <p>
+      <%= link_to 'Details', credit_path(credit)%> | 
+      <%= link_to 'Edit', edit_credit_path(credit)%> | 
+      <%= link_to 'Delete', credit_path(credit) , method: :delete %>
+    </p>
+    <hr>
+  <% end %>
+</div>

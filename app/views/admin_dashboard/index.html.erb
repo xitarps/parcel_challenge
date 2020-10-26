@@ -1,5 +1,10 @@
-<h3><%= current_admin.email + ' - Admin'%></h3>
-
-<p>
-  <%= link_to 'Requesters', requesters_path%> 
-</p>
+<div>
+  <h3><%= current_admin.email%></h3>
+  <div>
+    (Admin)
+  </div>
+  <hr>
+  <p>
+    <%= link_to 'Requesters', requesters_path%> 
+  </p>
+</div>

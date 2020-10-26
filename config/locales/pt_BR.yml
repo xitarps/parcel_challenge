@@ -124,7 +124,7 @@ pt-BR:
   how_call_requester: 'nome ou email'
   sorry_error: 'algo não está certo...'
   notification: 'notificação'
-  welcome_message: 'bem vindo ao sistema.'
+  welcome_message: 'bem vindo.'
   company_name: 'razão social'
   cnpj: 'cnpj'
   address: 'endereço'
@@ -140,7 +140,7 @@ pt-BR:
   error: 'oops, something went wrong'
   error_accepted: "Can't modify accepted credit"
   accepted: 'accepted'
-  notice_accepted: '* can only modify pending credit request'
+  notice_accepted: '* can only modify pending request'
   cant_delete_accepted: "Can't delete accepted credit"
   are_you_sure: "Are you sure?"
   edit: 'edit'
