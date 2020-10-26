@@ -5,18 +5,31 @@
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'example@example' %>
   </div>
 
   <div class="field">
+    <p><%= t(:only_numbers) %></p>
     <%= f.label :cnpj, t(:cnpj) %><br />
-    <%= f.text_field :cnpj, autocomplete: "CNPJ" %>
+    <%= f.text_field :cnpj, autocomplete: "CNPJ", placeholder: 'example: 02085513000178' %>
   </div>
 
   <div class="field">
     <%= f.label :company_name, t(:company_name) %><br />
-    <%= f.text_field :company_name, autocomplete: "email" %>
+    <%= f.text_field :company_name, autocomplete: "company name", placeholder: 'example: company co' %>
   </div>
+
+  <% if requester_signed_in? %>
+
+    <div class="field">
+      <%= link_to '+ Phone numbers', phones_path %>
+    </div>
+
+    <div class="field">
+      <%= link_to '+ Addresses', addresses_path %>
+    </div>
+
+  <% end %>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>

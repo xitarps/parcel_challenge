@@ -1,5 +1,4 @@
 require 'capybara/rspec'
-
 require 'simplecov'
 SimpleCov.start do
   add_filter 'config'

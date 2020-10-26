@@ -1,0 +1,10 @@
+<h2>Address Details</h2>
+
+<p>Owner: <%= @address.requester.company_name %></p>
+<p>Cep: <%= @address.requester_zip_code %></p>
+<p>State: <%= @address.state %></p>
+<p>City: <%= @address.city %></p>
+<p>Street: <%= @address.street %></p>
+<p>Number: <%= @address.number %></p>
+
+<p><%= link_to 'Addresses', addresses_path%></p>

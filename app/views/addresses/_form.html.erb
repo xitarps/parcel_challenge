@@ -1,0 +1,12 @@
+<%= form_with model: @address, local: true do |f| %>
+
+  <p><%= t(:only_numbers) %></p>
+  <%= f.label :requester_zip_code, t(:requester_zip_code) %>
+  <%= f.text_field(:requester_zip_code) %>
+
+  <p><%= t(:only_numbers) %></p>
+  <%= f.label :number, t(:number) %>
+  <%= f.number_field(:number) %>
+  
+  <%= f.submit "Save" %>
+<% end %>
