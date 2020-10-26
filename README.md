@@ -43,7 +43,7 @@ Algumas propostas futuras de desenvolvimento seriam:
 
 ## Sistema em ação(heroku):
 
-https://parcel-challenge.herokuapp.com/requester_dashboard
+https://parcel-challenge.herokuapp.com
 
 ## Screens:
 
