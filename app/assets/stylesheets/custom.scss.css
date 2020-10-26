@@ -1,0 +1,15 @@
+*{
+  color: #fff;
+}
+.nav-link{
+  color: white !important;
+}
+.nav-link:hover{
+  color: rgb(189, 189, 189) !important;
+}
+html,body{
+  background-color: rgb(68, 68, 68) !important;
+}
+.navbar-brand, a.nav-link, .bg-custom{
+  background-color: rgb(41, 41, 41) !important;
+}
