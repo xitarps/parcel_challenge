@@ -6,7 +6,7 @@
     <%= f.label :requester_zip_code, t(:requester_zip_code) %>
   </div>
   <div>
-    <%= f.text_field(:requester_zip_code) %>
+    <%= f.text_field(:requester_zip_code, placeholder: ex:'01001000') %>
   </div>
 
   <br>
@@ -16,7 +16,7 @@
     <%= f.label :number, t(:number) %>
   </div>
   <div>
-    <%= f.number_field(:number) %>
+    <%= f.number_field(:number, placeholder: ex:'123') %>
   </div>
   
   <br>
