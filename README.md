@@ -5,9 +5,9 @@ Sistema de geração de crédio parcelado desenvolvido com o propósito de entre
 
 Esse projeto teve o intuito de sanar os requisitos estipulados como:
 
-* Aplicação web, utilizando frameworks
-* Cadastrar um solicitante(razão social, cnpj, endereço(s) e telefone(s));
-* Criar uma solicitação de crédito(valor);
+* Aplicação web, utilizando frameworks.
+* Cadastrar um solicitante(razão social, cnpj, endereço(s) e telefone(s)).
+* Criar uma solicitação de crédito(valor).
 * Calcular prazo e taxa de juros.
 * Gerar automaticamente as respectivas parcelas com intervalos regulares de um mês entre os vencimentos.
 
@@ -17,7 +17,7 @@ Algumas propostas futuras de desenvolvimento seriam:
 * Limpar melhor o código
 * Enxugar partes do código
 * Implementar mais testes
-* Possivel refatoração de front-end
+* Possível refatoração de front-end
 * Admin poder alterar parcelas ou criar novas
 * entre outros...
 
