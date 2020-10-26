@@ -61,3 +61,9 @@ https://parcel-challenge.herokuapp.com
 ![login](git_images/prints/log_in.png)
 ![credit](git_images/prints/credit.png)
 ![address](git_images/prints/address.png)
+
+<hr>
+
+## Diagram:
+
+![diagram](git_images/erd/diagram.png)
