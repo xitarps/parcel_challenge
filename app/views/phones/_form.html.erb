@@ -1,0 +1,8 @@
+<%= form_with model: @phone, local: true do |f| %>
+
+  <p><%= t(:only_numbers) %></p>
+  <%= f.label :number, t(:number) %>
+  <%= telephone_field(:phone, :number) %>
+  
+  <%= f.submit "Save" %>
+<% end %>

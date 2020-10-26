@@ -1,0 +1,16 @@
+<h1>Phones</h1>
+<% if @phones.empty? %>
+  <p>No phone number yet...</p>
+<% end %>
+
+<%= link_to 'Add Phone' , new_phone_path %>
+
+<hr>
+
+<% @phones.each_with_index do |phone, index| %>
+  <p>
+    <p>nº <%= index + 1 %></p>
+    <p>number: <%= phone.number %></p>
+    <p><%= link_to 'Edit', edit_phone_path(phone)%> | <%= link_to 'Delete', phone_path(phone), method: :delete %></p>
+  </p>
+<% end %>
