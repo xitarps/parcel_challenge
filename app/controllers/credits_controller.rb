@@ -61,7 +61,7 @@ class CreditsController < ApplicationController
 
   def credit_params
     params.require(:credit)
-          .permit(:tax, :periods, :loan).merge(requester: current_requester)
+          .permit(:tax, :periods, :loan).merge(requester: change_if_admin)
   end
 
   def check_and_select_credit
@@ -103,5 +103,11 @@ class CreditsController < ApplicationController
     admin = admin_signed_in?
     pending = !@credit.already_accepted
     admin && pending
+  end
+
+  def change_if_admin
+    return @credit.requester if admin_signed_in?
+
+    current_requester
   end
 end
