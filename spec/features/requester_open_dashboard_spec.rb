@@ -5,12 +5,12 @@ feature 'Requester open dashboard' do
     log_in_requester
     visit requester_dashboard_path
 
-    expect(page).to have_content(I18n.t(:welcome).capitalize)
+    expect(page).to have_content('user@test.com')
   end
   scenario 'fail when not logged' do
     visit requester_dashboard_path
 
-    expect(page).not_to have_content(I18n.t(:welcome).capitalize)
+    expect(page).not_to have_content('user@test.com')
     expect(page).to have_content(I18n.t(:log_in).capitalize)
   end
 end

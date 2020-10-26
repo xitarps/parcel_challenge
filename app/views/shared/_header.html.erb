@@ -1,0 +1,18 @@
+<h1><%= t(:app_title).capitalize %></h1>
+
+<% if requester_signed_in? %>
+  <%= link_to 'Dashboard', requester_dashboard_path %> | 
+  <%= link_to 'Edit account', edit_requester_registration_path%> |
+  <%= link_to 'Log out', destroy_requester_session_path , method: :delete%>
+<% elsif admin_signed_in? %>
+  <%= link_to 'Dashboard', admin_dashboard_path%> |
+  <%= link_to 'Log out', destroy_admin_session_path , method: :delete%>
+<%else%>
+  <%= link_to 'Log in', new_requester_session_path%> | 
+  <%= link_to 'Log in(Admin)', new_admin_session_path %> |
+  <%= link_to 'Sign up', new_requester_registration_path%>
+<% end %>
+
+<hr>
+
+ 

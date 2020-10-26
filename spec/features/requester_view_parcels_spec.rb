@@ -8,7 +8,7 @@ feature 'Requester view parcels' do
     @credit.send(:generate_parcels)
     @credit.save
     visit requester_dashboard_path
-    click_on 'details'
+    click_on 'Details'
 
     expect(page).to have_content('Nº 1')
     expect(page).to have_content('Nº 2')
@@ -23,7 +23,7 @@ feature 'Requester view parcels' do
     @credit.send(:generate_parcels)
     @credit.save
     visit requester_dashboard_path
-    click_on 'details'
+    click_on 'Details'
 
     expect(page).not_to have_content('Nº 1')
     expect(page).not_to have_content('Nº 2')

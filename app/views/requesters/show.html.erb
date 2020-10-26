@@ -1,22 +1,57 @@
 <h1>Requester</h1>
 
+
+<p><%= link_to 'All Requesters', requesters_path %></p>
+
 <p>
+  <h2>Info</h2>
   <p> company name: <%= @requester.company_name %><p>
   <p> email: <%= @requester.email %></p>
   <p> cnpj: <%= @requester.cnpj %></p>
   <p> credits requestes: <%= @requester.credits.count %></p>
   <p> credits accepted: <%= @requester.credits.where(already_accepted: true).count%></p>
 </p>
-<p><%= link_to 'Requesters', requesters_path %></p>
 <hr>
+
+<p>
+  <h2>Phones</h2>
+  <% @requester.phones.each_with_index do |phone,index| %>
+    <p>
+      <p>Number(<%= index + 1 %>): <%= phone.number %></p>
+    </p>
+  <% end %>
+</p>
+
+
+<hr>
+
+<p>
+  <h2>Addresses</h2>
+  <% @requester.addresses.each_with_index do |address,index| %>
+    <p>
+      <p>Adress(<%= index + 1%>)</p>
+      <p>State: <%= address.state %></p>
+      <p>City: <%= address.city %></p>
+      <p>Street: <%= address.street %></p>
+      <p>Number: <%= address.number %></p>
+    </p>
+  <% end %>
+</p>
+
+
+<hr>
+
+<h2>Credits requests</h2>
 <p><%= t(:notice_accepted) %></p>
-<% @requester.credits.each do |credit| %>
+<% @requester.credits.each_with_index do |credit,index| %>
   <p>
+    <h5>Credit request(<%= index + 1%>)</h5>
     <p> Loan: R$ <%= credit.loan.to_s %></p>
     <p> tax: <%= credit.tax %></p>
     <p> parcel: R$ <%= credit.parcel.to_s %></p>
     <p> periods: <%= credit.periods%></p>
     <p>Status: <%= credit.already_accepted ? t(:accepted) : t(:pending) %></p>
     <%= link_to 'details', credit_path(credit)%>
+    <hr>
   </p>
 <% end %>

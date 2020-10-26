@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   resources :credits, except: %i[index]
   resources :requesters, only: %i[index show]
+
+  resources :phones
+  resources :addresses
 end

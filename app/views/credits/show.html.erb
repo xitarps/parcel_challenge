@@ -14,13 +14,11 @@
 
 <% if requester_signed_in? %>
 <p>
-  <%= link_to t(:dashboard).capitalize, requester_dashboard_path%> | 
   <%= link_to t(:edit).capitalize, edit_credit_path(@credit)%> | 
   <%= link_to t(:delete).capitalize, credit_path(@credit) , method: :delete %>
 </p>
 <% else %>
 <p>
-  <%= link_to t(:dashboard).capitalize, admin_dashboard_path%> | 
   <%= link_to 'Requester', requester_path(@credit.requester) %> | 
   <%= link_to t(:edit).capitalize, edit_credit_path(@credit)%> | 
   <%= link_to t(:delete).capitalize, credit_path(@credit) , method: :delete %>

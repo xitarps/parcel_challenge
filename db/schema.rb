@@ -77,6 +77,8 @@ ActiveRecord::Schema.define(version: 2020_10_23_211959) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "cnpj", null: false
     t.string "company_name", null: false
+    t.index ["cnpj"], name: "index_requesters_on_cnpj", unique: true
+    t.index ["company_name"], name: "index_requesters_on_company_name", unique: true
     t.index ["email"], name: "index_requesters_on_email", unique: true
     t.index ["reset_password_token"], name: "index_requesters_on_reset_password_token", unique: true
   end
