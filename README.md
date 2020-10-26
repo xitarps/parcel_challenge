@@ -41,6 +41,17 @@ Algumas propostas futuras de desenvolvimento seriam:
 
 - Obs: Por fazer uso do heroku com hospedagem gratuita, algumas limitações podem ocorrer, como limitações com decimal.
 
+## Default credentials:
+*in a real world scenario, it should be changed right after first login
+```
+admin:
+
+email: admin@test.com
+password: admin123
+
+```
+
+
 ## Sistema em ação(heroku):
 
 https://parcel-challenge.herokuapp.com
@@ -50,4 +61,3 @@ https://parcel-challenge.herokuapp.com
 ![login](git_images/prints/log_in.png)
 ![credit](git_images/prints/credit.png)
 ![address](git_images/prints/address.png)
-
