@@ -112,7 +112,7 @@ pt-BR:
   result: 'resultado'
   send: 'enviar'
   unknow: 'desconhecido'
-  requester_zip_code: 'cep'
+  requester_zip_code: 'Cep'
   requester: 'usuário'
   terms: termos
   art: 'art'
@@ -148,6 +148,7 @@ pt-BR:
   dashboard: 'dashboard'
   credit_destroyed: 'Successfully deleted'
   error_on_delete: 'Error on delete'
+  only_numbers: '*only numbers'
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
