@@ -152,6 +152,7 @@ pt-BR:
   errors:
       messages:
         invalid_zipcode: 'está inválido.'
+        not_saved: 'oops...'
   activerecord:
     models:
       requester: 'usuário'
@@ -168,9 +169,9 @@ pt-BR:
     errors:
       messages:
         inclusion: 'não selecionada'
-        blank: 'está com campo vazio, favor corrigir'
-        invalid: 'inserção inválida'
-        taken: 'já em uso'
-        confirmation: 'parece diferente, insira igual'
-        too_long: 'supera o limite de caracteres, que é: %{count}'
-        too_short: 'Inferior ao mínimo de caracteres'
+        blank: 'is blank'
+        invalid: 'invalid'
+        taken: 'already taken'
+        confirmation: 'differs'
+        too_long: 'limit: %{count}'
+        too_short: 'too short'

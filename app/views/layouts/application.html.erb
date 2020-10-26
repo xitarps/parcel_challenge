@@ -12,8 +12,10 @@
 
   <body>
     <%= render "shared/header"%>
-    <div class="container-fluid">
+    <div>
       <%= render "shared/messages/messages"%>
+    </div>
+    <div class="row align-items-center justify-content-center">
       <%= yield %>
     </div>
   </body>

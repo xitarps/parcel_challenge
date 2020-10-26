@@ -1,13 +1,18 @@
 <%= form_with model: @credit, local: true do |f| %>
 
-  <%= f.label :loan, t(:loan) %>
-  <%= f.number_field(:loan, in: 1.0..1000000.0, step: 0.5) %>
-
-  <%= f.label :tax, t(:tax) %>
-  <%= f.number_field(:tax, in: 1.0..20.0, step: 0.1) %>
-
-  <%= f.label :periods, t(:periods) %>
-  <%= f.number_field(:periods, in: 1.0..600.0, step: 1.0) %>
-  
-  <%= f.submit "Save" %>
+  <div class="container">
+    <%= f.label :loan, t(:loan) %>
+    <%= f.number_field(:loan, in: 1.0..1000000.0, step: 0.5) %>
+  </div>
+  <div class="container">
+    <%= f.label :tax, t(:tax) %>
+    <%= f.number_field(:tax, in: 1.0..20.0, step: 0.1) %><br/>
+  </div>
+  <div class="container">
+    <%= f.label :periods, t(:periods) %>
+    <%= f.number_field(:periods, in: 1.0..600.0, step: 1.0) %><br/>
+  </div>
+  <div class="container">
+    <%= f.submit "Save" , class:"btn btn-outline-secondary"%>
+  </div>
 <% end %>

@@ -1,14 +1,14 @@
 *{
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .nav-link{
   color: white !important;
 }
 .nav-link:hover{
-  color: rgb(189, 189, 189) !important;
+  color: rgb(95, 95, 95) !important;
 }
 html,body{
-  background-color: rgb(68, 68, 68) !important;
+  background-color: rgb(224, 224, 224) !important;
 }
 .navbar-brand, a.nav-link, .bg-custom{
   background-color: rgb(41, 41, 41) !important;
